@@ -1,0 +1,44 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container to hold the perspective effect */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    perspective: 1000px; /* Perspective creates a 3D effect */
+}
+
+/* Animation Box */
+.animation-box {
+    width: 150px;
+    height: 150px;
+    background-color: #5b31f7;
+    transform-style: preserve-3d;
+    animation: rotateScale 5s infinite; /* Applying the animation */
+}
+
+/* Animation keyframes for transform */
+@keyframes rotateScale {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) scale(1);
+    }
+    25% {
+        transform: rotateX(180deg) rotateY(90deg) scale(1.2);
+    }
+    50% {
+        transform: rotateX(360deg) rotateY(180deg) scale(1);
+    }
+    75% {
+        transform: rotateX(540deg) rotateY(270deg) scale(0.8);
+    }
+    100% {
+        transform: rotateX(720deg) rotateY(360deg) scale(1);
+    }
+}
